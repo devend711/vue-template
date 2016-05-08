@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "dist/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -50,13 +50,15 @@
 
 	var _vue2 = _interopRequireDefault(_vue);
 
+	var _app = __webpack_require__(3);
+
+	var _app2 = _interopRequireDefault(_app);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _vue2.default({
 	  el: 'body',
-	  data: {
-	    message: "Hello Vue"
-	  }
+	  components: { App: _app2.default }
 	});
 
 /***/ },
@@ -10185,6 +10187,57 @@
 	};
 	process.umask = function() { return 0; };
 
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(4)
+	__vue_template__ = __webpack_require__(5)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "/Users/devendayal/Documents/admin-signup/src/app.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	// <div class="message">{{ msg }}</div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+	  data: function data() {
+	    return {
+	      msg: 'Hello world!'
+	    };
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"message\">{{ msg }}</div>\n";
 
 /***/ }
 /******/ ]);
